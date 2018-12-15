@@ -1,0 +1,10 @@
+var request = require('postman-request');
+var postman_get = require('./GetRequest.js');
+var postman_post = require('./PostRequest.js');
+var postman_delete  = require('./DeleteRequest.js');
+var data = require('./Data.json');
+var postman_put = require('./PutRequest.js');
+postman_get.getRequest(data.Request_Get);
+postman_post.postRequest(data.Request_Post,{ "email": data.email, "password": data.password });
+postman_delete.deleteRequest (data.Request_Delete);
+postman_put.putRequest(data.Request_Put,{ "name": data.name, "job" : data.name });
